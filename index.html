@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helping Hands NGO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Helping Hands NGO</div>
+
+        <button class="menu-toggle" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Together We Can Make a Difference</h1>
+            <p>
+                Helping poor children with education, food, and healthcare.
+            </p>
+            <div class="hero-actions">
+                <a href="#donation" class="btn donate-btn">Donate Now</a>
+                <a href="#contact" class="btn btn-secondary">Join Volunteer</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>
+            Helping Hands NGO is a non-profit organization working for
+            education, health, and social welfare of needy people.
+        </p>
+        <div class="stats">
+            <div>
+                <h3 data-target="1200">0</h3>
+                <p>Students Supported</p>
+            </div>
+            <div>
+                <h3 data-target="350">0</h3>
+                <p>Families Helped</p>
+            </div>
+            <div>
+                <h3 data-target="25">0</h3>
+                <p>Medical Camps</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs" id="programs">
+        <h2>Our Programs</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Education</h3>
+                <p>Providing free education to children.</p>
+            </div>
+            <div class="card">
+                <h3>Food Donation</h3>
+                <p>Distributing food to poor families.</p>
+            </div>
+            <div class="card">
+                <h3>Healthcare</h3>
+                <p>Free medical camps and health support.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=600&q=80" alt="children learning">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=600&q=80" alt="donation event">
+            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=600&q=80" alt="medical camp">
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            <p class="form-message" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <section class="donation" id="donation">
+        <h2>Support Our Cause</h2>
+        <p>Every contribution helps us bring education, food, and care to families in need.</p>
+        <div class="donation-banner">
+            <span>Total Raised: ₹<span id="donationAmount">240000</span></span>
+            <button class="donate-btn" id="openDonationModal">Donate Now</button>
+        </div>
+    </section>
+
+    <div class="modal" id="donationModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeDonationModal">&times;</span>
+            <h3>Make a Donation</h3>
+            <form id="donationForm">
+                <input type="number" id="donationInput" min="100" step="50" value="500" required>
+                <button type="submit">Donate</button>
+            </form>
+            <p class="modal-message" aria-live="polite"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© <span id="year"></span> Helping Hands NGO | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
